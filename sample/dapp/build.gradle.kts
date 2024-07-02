@@ -5,7 +5,7 @@ plugins {
     id(libs.plugins.kotlin.kapt.get().pluginId)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
-    id("signing-config")
+    //id("signing-config")
 }
 
 android {
@@ -13,7 +13,7 @@ android {
     compileSdk = COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.walletconnect.sample.dapp"
+        applicationId = "com.walletconnect.sample.dapp.leilu"
         minSdk = MIN_SDK
         targetSdk = TARGET_SDK
         versionName = SAMPLE_VERSION_NAME
@@ -75,8 +75,8 @@ dependencies {
     debugImplementation(project(":core:android"))
     debugImplementation(project(":product:walletconnectmodal"))
 
-    internalImplementation(project(":core:android"))
-    internalImplementation(project(":product:walletconnectmodal"))
+    implementation(project(":core:android"))
+    implementation(project(":product:walletconnectmodal"))
 
     releaseImplementation(platform("com.walletconnect:android-bom:$BOM_VERSION"))
     releaseImplementation("com.walletconnect:android-core")

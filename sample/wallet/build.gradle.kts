@@ -3,7 +3,7 @@ plugins {
     id(libs.plugins.kotlin.android.get().pluginId)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
-    id("signing-config")
+    //id("signing-config")
 //    id("io.sentry.android.gradle") version "3.12.0"
 }
 
@@ -101,9 +101,9 @@ dependencies {
     debugImplementation(project(":product:web3wallet"))
     debugImplementation(project(":protocol:notify"))
 
-    internalImplementation(project(":core:android"))
-    internalImplementation(project(":product:web3wallet"))
-    internalImplementation(project(":protocol:notify"))
+    implementation(project(":core:android"))
+    implementation(project(":product:web3wallet"))
+    implementation(project(":protocol:notify"))
 
     releaseImplementation(platform("com.walletconnect:android-bom:$BOM_VERSION"))
     releaseImplementation("com.walletconnect:android-core")

@@ -1,13 +1,13 @@
 package com.walletconnect.sample.dapp
 
 import android.app.Application
-import com.google.firebase.appdistribution.FirebaseAppDistribution
+//import com.google.firebase.appdistribution.FirebaseAppDistribution
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 import com.walletconnect.android.Core
 import com.walletconnect.android.CoreClient
 import com.walletconnect.android.relay.ConnectionType
-import com.walletconnect.sample.common.BuildConfig
+//import com.walletconnect.sample.common.BuildConfig
 import com.walletconnect.sample.common.RELAY_URL
 import com.walletconnect.sample.common.tag
 import com.walletconnect.wcmodal.client.Modal
@@ -19,7 +19,7 @@ class DappSampleApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val serverUri = "wss://$RELAY_URL?projectId=${BuildConfig.PROJECT_ID}"
+        val serverUri = "wss://$RELAY_URL?projectId=48e62aae4caa3713e482f189622f853c"
         val appMetaData = Core.Model.AppMetaData(
             name = "Kotlin Dapp",
             description = "Kotlin Dapp Implementation",
@@ -43,6 +43,6 @@ class DappSampleApp : Application() {
             Timber.e(tag(this), error.throwable.stackTraceToString())
         }
 
-        FirebaseAppDistribution.getInstance().updateIfNewReleaseAvailable()
+        //FirebaseAppDistribution.getInstance().updateIfNewReleaseAvailable()
     }
 }

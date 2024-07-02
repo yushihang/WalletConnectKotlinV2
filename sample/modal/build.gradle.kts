@@ -4,7 +4,7 @@ plugins {
     id(libs.plugins.kotlin.kapt.get().pluginId)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
-    id("signing-config")
+    //id("signing-config")
 }
 
 android {
@@ -68,8 +68,8 @@ dependencies {
     debugImplementation(project(":core:android"))
     debugImplementation(project(":product:web3modal"))
 
-    internalImplementation(project(":core:android"))
-    internalImplementation(project(":product:web3modal"))
+    implementation(project(":core:android"))
+    implementation(project(":product:web3modal"))
 
     releaseImplementation(platform("com.walletconnect:android-bom:$BOM_VERSION"))
     releaseImplementation("com.walletconnect:android-core")
